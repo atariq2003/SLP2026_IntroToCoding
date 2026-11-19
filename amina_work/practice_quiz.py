@@ -63,9 +63,14 @@ questions = [
     ),
 ]
 
+score = 0
+
 for question, choices, correct_answer in questions:
     answer = input(f"{question}\n{choices}\nYour answer (A-D): ")
     if answer.strip().upper() == correct_answer:
         print("That's correct")
+        score += 1
     else:
         print("Incorrect. try again")
+
+print(f"Scoreboard: You got {score} out of {len(questions)} questions correct.")
